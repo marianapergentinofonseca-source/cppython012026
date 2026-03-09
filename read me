@@ -1,0 +1,71 @@
+
+Projeto desenvolvido por:
+
+* Mariana
+* Alexandre 
+* Julia  
+
+
+# Cadastro de Produtos – MAJ Comércio de Sportswear
+
+## Descrição do Projeto
+
+Este projeto consiste em um sistema simples de **gestão de estoque desenvolvido em Python**, executado via terminal.
+O programa permite cadastrar, remover, atualizar e visualizar produtos de uma loja fictícia chamada **MAJ Comércio de Sportswear**.
+
+O objetivo do projeto é praticar conceitos básicos de programação em Python, como:
+
+* Estruturas de dados (listas e dicionários)
+* Organização do código em múltiplos arquivos
+* Funções
+* Entrada e saída de dados pelo terminal
+* Estruturas condicionais e de repetição
+
+## Funcionalidades
+
+O sistema possui um menu interativo com as seguintes opções:
+
+1. **Adicionar produto ao estoque**
+2. **Excluir produto do estoque**
+3. **Atualizar quantidade de produtos**
+4. **Alerta de estoque baixo** (produtos com menos de 50 unidades)
+5. **Listar todos os produtos cadastrados**
+6. **Sair do sistema**
+
+## Estrutura do Projeto
+
+O projeto está dividido em dois arquivos principais:
+
+**main.py**
+Responsável pelo menu principal do sistema e pela navegação entre as funcionalidades.
+
+**funcoes.py**
+Contém as funções responsáveis pelas operações de estoque, como cadastro, exclusão, atualização e listagem de produtos.
+
+Os produtos são armazenados em uma **lista de dicionários**, contendo informações como:
+
+* Nome do produto
+* Código do produto
+* Tipo
+* Quantidade em estoque
+* Preço
+* Detalhes
+* Fornecedor
+
+## Como Executar o Projeto
+
+1. Certifique-se de ter o **Python instalado** em seu computador.
+2. No terminal, navegue até a pasta do projeto.
+3. Execute o seguinte comando:
+
+```bash
+python main.py
+```
+
+O sistema será iniciado no terminal com o menu de opções.
+
+## Tecnologias Utilizadas
+
+* Python 3
+* Terminal / CLI
+* Estruturas de dados nativas do Python
