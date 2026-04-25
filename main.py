@@ -3,28 +3,39 @@ from funcoes import *
 
 
 def exibir_nome_do_programa():
-    nome =("Cadastro de produtos - MAJ comercio de sportswear")
+    nome = "Cadastro de produtos - MAJ comercio de sportswear \n"
     print(nome)
 
+
 def exibir_opcoes():
-    print("1.Gestão de estoque -  adicionar produto")
-    print("2. Gestão de estoque -  excluir produto")
-    print("3. Gestão de estoque -  atualizar estoque")
-    print("4. Gestão de estoque -  alerta de estoque")
+    print("1. Gestão de estoque - adicionar produto")
+    print("2. Gestão de estoque - excluir produto")
+    print("3. Gestão de estoque - atualizar estoque")
+    print("4. Gestão de estoque - alerta de estoque \n")
     print("5. Listar produtos")
-    print("0.Sair\n")
+    print("6. Registrar venda")
+    print("7. Aplicar desconto ou promoção")
+    print("8. Listar vendas\n")
+    print("9. Relatório de vendas")
+    print("10. Relatório de estoque")
+    print("11. Histórico de movimentações\n")
+    print("0. Sair\n")
+
 
 def voltar_ao_menu_principal():
-    input("digite uma tecla para voltar ao menu principal: ")
+    input("\nDigite uma tecla para voltar ao menu principal: ")
     main()
 
+
 def opcao_invalida():
-    print("opcao inválida\n")
+    print("Opção inválida\n")
     voltar_ao_menu_principal()
+
 
 def escolher_opcoes():
     try:
-        opcao_escolhida = int(input("escolha uma opcao: "))
+        opcao_escolhida = int(input("Escolha uma opção: "))
+
         if opcao_escolhida == 1:
             estoque_adicionar_produto()
         elif opcao_escolhida == 2:
@@ -34,23 +45,40 @@ def escolher_opcoes():
         elif opcao_escolhida == 4:
             estoque_alerta()
         elif opcao_escolhida == 5:
-            listar_produtos()    
-        elif opcao_escolhida ==0:
+            listar_produtos()
+        elif opcao_escolhida == 6:
+            registrar_venda()
+        elif opcao_escolhida == 7:
+            aplicar_desconto_promocao()
+        elif opcao_escolhida == 8:
+            listar_vendas()
+        elif opcao_escolhida == 9:
+            relatorio_vendas()
+        elif opcao_escolhida == 10:
+            relatorio_estoque()
+        elif opcao_escolhida == 11:
+            historico_movimentacoes()
+        elif opcao_escolhida == 0:
             finalizar_app()
             return False
         else:
             opcao_invalida()
             return False
+
     except ValueError:
         print("Por favor, digite um número válido.")
         voltar_ao_menu_principal()
+
 
 def main():
     while True:
         os.system("clear")
         exibir_nome_do_programa()
         exibir_opcoes()
+
         if not escolher_opcoes():
-            break    
-if __name__ == '__main__':
+            break
+
+
+if __name__ == "__main__":
     main()
